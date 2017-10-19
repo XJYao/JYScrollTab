@@ -91,6 +91,11 @@
 @property (nonatomic, assign, readonly) NSUInteger selectedTabIndex;
 
 /**
+ auto adjust selected tab to center if it can, default is YES.
+ */
+@property (nonatomic, assign) BOOL autoAdjustSelectedTabToCenter;
+
+/**
  called when tab is selected.
  */
 @property (nonatomic, copy, setter=didSelectedTab:) void (^didSelectedTab)(UIView *tab, NSUInteger tabIndex);
@@ -99,7 +104,8 @@
  select tab with index.
 
  @param tabIndex index of tab which will be selected.
+ @return If tabIndex is NSNotFound, will return NO.
  */
-- (void)selectTab:(NSUInteger)tabIndex;
+- (BOOL)selectTab:(NSUInteger)tabIndex;
 
 @end

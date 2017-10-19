@@ -10,7 +10,7 @@
 #import "UIView+JYTab.h"
 
 
-@interface JYScrollTab () <UIScrollViewDelegate>
+@interface JYScrollTab ()
 
 @property (nonatomic, strong) UIScrollView *containerScrollView;
 @property (nonatomic, strong) UIView *contentView;
@@ -29,7 +29,6 @@
         //add UI
         _containerScrollView = [[UIScrollView alloc] init];
         [_containerScrollView setBackgroundColor:[UIColor clearColor]];
-        [_containerScrollView setDelegate:self];
         [_containerScrollView setPagingEnabled:NO];
         [self addSubview:_containerScrollView];
 
@@ -47,6 +46,7 @@
         _animateDuration = 0.3;
         _tabs = nil;
         _selectedTabIndex = NSNotFound;
+        _autoAdjustSelectedTabToCenter = YES;
 
         [self setShowsHorizontalScrollIndicator:NO];
         [self setBounces:NO];
@@ -140,9 +140,9 @@
     [self setNeedsLayout];
 }
 
-- (void)selectTab:(NSUInteger)tabIndex {
+- (BOOL)selectTab:(NSUInteger)tabIndex {
     if (tabIndex == NSNotFound) {
-        return;
+        return NO;
     }
 
     if (tabIndex >= _tabs.count) {
@@ -162,9 +162,45 @@
 
     //layout
     [self setNeedsLayout];
+    
+    //auto adjust
+    CGFloat offsetY = _containerScrollView.contentOffset.y;
+    
+    if (_autoAdjustSelectedTabToCenter) {
+        CGFloat needOffsetX = tab.frame.origin.x + tab.frame.size.width / 2.0 - _containerScrollView.frame.size.width / 2.0;
+        
+        CGFloat maxOffsetX = _containerScrollView.contentSize.width - _containerScrollView.frame.size.width;
+        if (needOffsetX < 0) {
+            needOffsetX = 0;
+        } else if (needOffsetX > maxOffsetX) {
+            needOffsetX = maxOffsetX;
+        }
+        
+        [_containerScrollView setContentOffset:CGPointMake(needOffsetX, offsetY) animated:YES];
+    } else {
+        if (tab.frame.origin.x < _containerScrollView.contentOffset.x) {
+            [_containerScrollView setContentOffset:CGPointMake(tab.frame.origin.x, offsetY) animated:YES];
+        } else if ((tab.frame.origin.x + tab.frame.size.width) > (_containerScrollView.contentOffset.x + _containerScrollView.frame.size.width)) {
+            [_containerScrollView setContentOffset:CGPointMake(tab.frame.origin.x + tab.frame.size.width - _containerScrollView.frame.size.width, offsetY) animated:YES];
+        }
+    }
+    
+    return YES;
 }
 
 #pragma mark - Private
+
+- (CGFloat)widthForTab:(UIView *)tab tabIndex:(NSInteger)tabIndex {
+    CGFloat tabWidth = 0;
+    if (_widthForTab) {
+        tabWidth = _widthForTab(tab, tabIndex);
+    } else if (_delegate && [_delegate respondsToSelector:@selector(scrollTab:widthForTab:tabIndex:)]) {
+        tabWidth = [_delegate scrollTab:self widthForTab:tab tabIndex:tabIndex];
+    } else {
+        tabWidth = _tabs.count > 0 ? _containerScrollView.frame.size.width / _tabs.count : 0;
+    }
+    return tabWidth;
+}
 
 - (void)layoutSubviews {
     [super layoutSubviews];
@@ -205,18 +241,10 @@
     CGFloat tabX = 0;
     CGFloat tabY = 0;
 
-    CGFloat averagedTabWidth = _tabs.count > 0 ? containerScrollViewWidth / _tabs.count : 0;
     for (NSInteger i = 0; i < _tabs.count; i++) {
         UIView *tab = [_tabs objectAtIndex:i];
 
-        CGFloat tabWidth = 0;
-        if (_widthForTab) {
-            tabWidth = _widthForTab(tab, i);
-        } else if (_delegate && [_delegate respondsToSelector:@selector(scrollTab:widthForTab:tabIndex:)]) {
-            tabWidth = [_delegate scrollTab:self widthForTab:tab tabIndex:i];
-        } else {
-            tabWidth = averagedTabWidth;
-        }
+        CGFloat tabWidth = [self widthForTab:tab tabIndex:i];
 
         if (i == _selectedTabIndex) {
             separatorImageViewX = tabX;
