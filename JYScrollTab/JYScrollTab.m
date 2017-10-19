@@ -162,20 +162,20 @@
 
     //layout
     [self setNeedsLayout];
-    
+
     //auto adjust
     CGFloat offsetY = _containerScrollView.contentOffset.y;
-    
+
     if (_autoAdjustSelectedTabToCenter) {
         CGFloat needOffsetX = tab.frame.origin.x + tab.frame.size.width / 2.0 - _containerScrollView.frame.size.width / 2.0;
-        
+
         CGFloat maxOffsetX = _containerScrollView.contentSize.width - _containerScrollView.frame.size.width;
         if (needOffsetX < 0) {
             needOffsetX = 0;
         } else if (needOffsetX > maxOffsetX) {
             needOffsetX = maxOffsetX;
         }
-        
+
         [_containerScrollView setContentOffset:CGPointMake(needOffsetX, offsetY) animated:YES];
     } else {
         if (tab.frame.origin.x < _containerScrollView.contentOffset.x) {
@@ -184,7 +184,7 @@
             [_containerScrollView setContentOffset:CGPointMake(tab.frame.origin.x + tab.frame.size.width - _containerScrollView.frame.size.width, offsetY) animated:YES];
         }
     }
-    
+
     return YES;
 }
 
