@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "JYScrollTab"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "JYScrollTab is a scrolling tab bar."
 
   # This description is used to generate tags and improve search results.
