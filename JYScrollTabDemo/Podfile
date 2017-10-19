@@ -1,0 +1,14 @@
+platform :ios, '8.0'
+
+def componentsPod
+    pod 'JYScrollTab', :path => '../'
+end
+
+def vendorsPod
+
+end
+
+target 'JYScrollTabDemo' do
+    componentsPod
+    vendorsPod
+end

@@ -1,0 +1,633 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		38E507349EC83AC094AB1812 /* libPods-JYScrollTabDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B0E840C3CC6D49D509AAB7C /* libPods-JYScrollTabDemo.a */; };
+		56F87A591F96F3FE00D451F9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F87A581F96F3FE00D451F9 /* AppDelegate.m */; };
+		56F87A5C1F96F3FE00D451F9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F87A5B1F96F3FE00D451F9 /* ViewController.m */; };
+		56F87A5F1F96F3FE00D451F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56F87A5D1F96F3FE00D451F9 /* Main.storyboard */; };
+		56F87A611F96F3FE00D451F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56F87A601F96F3FE00D451F9 /* Assets.xcassets */; };
+		56F87A641F96F3FE00D451F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56F87A621F96F3FE00D451F9 /* LaunchScreen.storyboard */; };
+		56F87A671F96F3FE00D451F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F87A661F96F3FE00D451F9 /* main.m */; };
+		56F87A711F96F3FE00D451F9 /* JYScrollTabDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F87A701F96F3FE00D451F9 /* JYScrollTabDemoTests.m */; };
+		56F87A7C1F96F3FE00D451F9 /* JYScrollTabDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F87A7B1F96F3FE00D451F9 /* JYScrollTabDemoUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		56F87A6D1F96F3FE00D451F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56F87A4C1F96F3FE00D451F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 56F87A531F96F3FE00D451F9;
+			remoteInfo = JYScrollTabDemo;
+		};
+		56F87A781F96F3FE00D451F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56F87A4C1F96F3FE00D451F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 56F87A531F96F3FE00D451F9;
+			remoteInfo = JYScrollTabDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		56F87A541F96F3FE00D451F9 /* JYScrollTabDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JYScrollTabDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		56F87A571F96F3FE00D451F9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		56F87A581F96F3FE00D451F9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		56F87A5A1F96F3FE00D451F9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		56F87A5B1F96F3FE00D451F9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		56F87A5E1F96F3FE00D451F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		56F87A601F96F3FE00D451F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		56F87A631F96F3FE00D451F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		56F87A651F96F3FE00D451F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56F87A661F96F3FE00D451F9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		56F87A6C1F96F3FE00D451F9 /* JYScrollTabDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JYScrollTabDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		56F87A701F96F3FE00D451F9 /* JYScrollTabDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYScrollTabDemoTests.m; sourceTree = "<group>"; };
+		56F87A721F96F3FE00D451F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56F87A771F96F3FE00D451F9 /* JYScrollTabDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JYScrollTabDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		56F87A7B1F96F3FE00D451F9 /* JYScrollTabDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYScrollTabDemoUITests.m; sourceTree = "<group>"; };
+		56F87A7D1F96F3FE00D451F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B0E840C3CC6D49D509AAB7C /* libPods-JYScrollTabDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JYScrollTabDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AA907D59E1040AEC8E9CB37 /* Pods-JYScrollTabDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JYScrollTabDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-JYScrollTabDemo/Pods-JYScrollTabDemo.release.xcconfig"; sourceTree = "<group>"; };
+		9D1CA7CC4BE0DA60C5920C07 /* Pods-JYScrollTabDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JYScrollTabDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JYScrollTabDemo/Pods-JYScrollTabDemo.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		56F87A511F96F3FE00D451F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38E507349EC83AC094AB1812 /* libPods-JYScrollTabDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56F87A691F96F3FE00D451F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56F87A741F96F3FE00D451F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		56F87A4B1F96F3FE00D451F9 = {
+			isa = PBXGroup;
+			children = (
+				56F87A561F96F3FE00D451F9 /* JYScrollTabDemo */,
+				56F87A6F1F96F3FE00D451F9 /* JYScrollTabDemoTests */,
+				56F87A7A1F96F3FE00D451F9 /* JYScrollTabDemoUITests */,
+				56F87A551F96F3FE00D451F9 /* Products */,
+				D41DB1CC088CFEAA1CE2ED3C /* Pods */,
+				E4402FC72AE63E9B022B702E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		56F87A551F96F3FE00D451F9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				56F87A541F96F3FE00D451F9 /* JYScrollTabDemo.app */,
+				56F87A6C1F96F3FE00D451F9 /* JYScrollTabDemoTests.xctest */,
+				56F87A771F96F3FE00D451F9 /* JYScrollTabDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		56F87A561F96F3FE00D451F9 /* JYScrollTabDemo */ = {
+			isa = PBXGroup;
+			children = (
+				56F87A571F96F3FE00D451F9 /* AppDelegate.h */,
+				56F87A581F96F3FE00D451F9 /* AppDelegate.m */,
+				56F87A5A1F96F3FE00D451F9 /* ViewController.h */,
+				56F87A5B1F96F3FE00D451F9 /* ViewController.m */,
+				56F87A5D1F96F3FE00D451F9 /* Main.storyboard */,
+				56F87A601F96F3FE00D451F9 /* Assets.xcassets */,
+				56F87A621F96F3FE00D451F9 /* LaunchScreen.storyboard */,
+				56F87A651F96F3FE00D451F9 /* Info.plist */,
+				56F87A661F96F3FE00D451F9 /* main.m */,
+			);
+			path = JYScrollTabDemo;
+			sourceTree = "<group>";
+		};
+		56F87A6F1F96F3FE00D451F9 /* JYScrollTabDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				56F87A701F96F3FE00D451F9 /* JYScrollTabDemoTests.m */,
+				56F87A721F96F3FE00D451F9 /* Info.plist */,
+			);
+			path = JYScrollTabDemoTests;
+			sourceTree = "<group>";
+		};
+		56F87A7A1F96F3FE00D451F9 /* JYScrollTabDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				56F87A7B1F96F3FE00D451F9 /* JYScrollTabDemoUITests.m */,
+				56F87A7D1F96F3FE00D451F9 /* Info.plist */,
+			);
+			path = JYScrollTabDemoUITests;
+			sourceTree = "<group>";
+		};
+		D41DB1CC088CFEAA1CE2ED3C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9D1CA7CC4BE0DA60C5920C07 /* Pods-JYScrollTabDemo.debug.xcconfig */,
+				8AA907D59E1040AEC8E9CB37 /* Pods-JYScrollTabDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E4402FC72AE63E9B022B702E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B0E840C3CC6D49D509AAB7C /* libPods-JYScrollTabDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		56F87A531F96F3FE00D451F9 /* JYScrollTabDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56F87A801F96F3FE00D451F9 /* Build configuration list for PBXNativeTarget "JYScrollTabDemo" */;
+			buildPhases = (
+				5C83F42A8733E9AE49A8FCC6 /* [CP] Check Pods Manifest.lock */,
+				56F87A501F96F3FE00D451F9 /* Sources */,
+				56F87A511F96F3FE00D451F9 /* Frameworks */,
+				56F87A521F96F3FE00D451F9 /* Resources */,
+				30DD8F753B65C1D4CEE89502 /* [CP] Embed Pods Frameworks */,
+				4D8FCC3E558FF5BA2BAF20BA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JYScrollTabDemo;
+			productName = JYScrollTabDemo;
+			productReference = 56F87A541F96F3FE00D451F9 /* JYScrollTabDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		56F87A6B1F96F3FE00D451F9 /* JYScrollTabDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56F87A831F96F3FE00D451F9 /* Build configuration list for PBXNativeTarget "JYScrollTabDemoTests" */;
+			buildPhases = (
+				56F87A681F96F3FE00D451F9 /* Sources */,
+				56F87A691F96F3FE00D451F9 /* Frameworks */,
+				56F87A6A1F96F3FE00D451F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				56F87A6E1F96F3FE00D451F9 /* PBXTargetDependency */,
+			);
+			name = JYScrollTabDemoTests;
+			productName = JYScrollTabDemoTests;
+			productReference = 56F87A6C1F96F3FE00D451F9 /* JYScrollTabDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		56F87A761F96F3FE00D451F9 /* JYScrollTabDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56F87A861F96F3FE00D451F9 /* Build configuration list for PBXNativeTarget "JYScrollTabDemoUITests" */;
+			buildPhases = (
+				56F87A731F96F3FE00D451F9 /* Sources */,
+				56F87A741F96F3FE00D451F9 /* Frameworks */,
+				56F87A751F96F3FE00D451F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				56F87A791F96F3FE00D451F9 /* PBXTargetDependency */,
+			);
+			name = JYScrollTabDemoUITests;
+			productName = JYScrollTabDemoUITests;
+			productReference = 56F87A771F96F3FE00D451F9 /* JYScrollTabDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		56F87A4C1F96F3FE00D451F9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = JY;
+				TargetAttributes = {
+					56F87A531F96F3FE00D451F9 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Manual;
+					};
+					56F87A6B1F96F3FE00D451F9 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 56F87A531F96F3FE00D451F9;
+					};
+					56F87A761F96F3FE00D451F9 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 56F87A531F96F3FE00D451F9;
+					};
+				};
+			};
+			buildConfigurationList = 56F87A4F1F96F3FE00D451F9 /* Build configuration list for PBXProject "JYScrollTabDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 56F87A4B1F96F3FE00D451F9;
+			productRefGroup = 56F87A551F96F3FE00D451F9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				56F87A531F96F3FE00D451F9 /* JYScrollTabDemo */,
+				56F87A6B1F96F3FE00D451F9 /* JYScrollTabDemoTests */,
+				56F87A761F96F3FE00D451F9 /* JYScrollTabDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		56F87A521F96F3FE00D451F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56F87A641F96F3FE00D451F9 /* LaunchScreen.storyboard in Resources */,
+				56F87A611F96F3FE00D451F9 /* Assets.xcassets in Resources */,
+				56F87A5F1F96F3FE00D451F9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56F87A6A1F96F3FE00D451F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56F87A751F96F3FE00D451F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		30DD8F753B65C1D4CEE89502 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JYScrollTabDemo/Pods-JYScrollTabDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D8FCC3E558FF5BA2BAF20BA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JYScrollTabDemo/Pods-JYScrollTabDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C83F42A8733E9AE49A8FCC6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		56F87A501F96F3FE00D451F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56F87A5C1F96F3FE00D451F9 /* ViewController.m in Sources */,
+				56F87A671F96F3FE00D451F9 /* main.m in Sources */,
+				56F87A591F96F3FE00D451F9 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56F87A681F96F3FE00D451F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56F87A711F96F3FE00D451F9 /* JYScrollTabDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56F87A731F96F3FE00D451F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56F87A7C1F96F3FE00D451F9 /* JYScrollTabDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		56F87A6E1F96F3FE00D451F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 56F87A531F96F3FE00D451F9 /* JYScrollTabDemo */;
+			targetProxy = 56F87A6D1F96F3FE00D451F9 /* PBXContainerItemProxy */;
+		};
+		56F87A791F96F3FE00D451F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 56F87A531F96F3FE00D451F9 /* JYScrollTabDemo */;
+			targetProxy = 56F87A781F96F3FE00D451F9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		56F87A5D1F96F3FE00D451F9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				56F87A5E1F96F3FE00D451F9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		56F87A621F96F3FE00D451F9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				56F87A631F96F3FE00D451F9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		56F87A7E1F96F3FE00D451F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		56F87A7F1F96F3FE00D451F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		56F87A811F96F3FE00D451F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D1CA7CC4BE0DA60C5920C07 /* Pods-JYScrollTabDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = A42W6VHWT2;
+				INFOPLIST_FILE = JYScrollTabDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jy.JYScrollTabDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6e008356-e04d-4cc0-9c0c-4eadee65b8ba";
+				PROVISIONING_PROFILE_SPECIFIER = "wisp enterprise dev";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		56F87A821F96F3FE00D451F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AA907D59E1040AEC8E9CB37 /* Pods-JYScrollTabDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = JYScrollTabDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jy.JYScrollTabDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		56F87A841F96F3FE00D451F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = JYScrollTabDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jy.JYScrollTabDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JYScrollTabDemo.app/JYScrollTabDemo";
+			};
+			name = Debug;
+		};
+		56F87A851F96F3FE00D451F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = JYScrollTabDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jy.JYScrollTabDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JYScrollTabDemo.app/JYScrollTabDemo";
+			};
+			name = Release;
+		};
+		56F87A871F96F3FE00D451F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = JYScrollTabDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jy.JYScrollTabDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JYScrollTabDemo;
+			};
+			name = Debug;
+		};
+		56F87A881F96F3FE00D451F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = JYScrollTabDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jy.JYScrollTabDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JYScrollTabDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		56F87A4F1F96F3FE00D451F9 /* Build configuration list for PBXProject "JYScrollTabDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56F87A7E1F96F3FE00D451F9 /* Debug */,
+				56F87A7F1F96F3FE00D451F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		56F87A801F96F3FE00D451F9 /* Build configuration list for PBXNativeTarget "JYScrollTabDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56F87A811F96F3FE00D451F9 /* Debug */,
+				56F87A821F96F3FE00D451F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		56F87A831F96F3FE00D451F9 /* Build configuration list for PBXNativeTarget "JYScrollTabDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56F87A841F96F3FE00D451F9 /* Debug */,
+				56F87A851F96F3FE00D451F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		56F87A861F96F3FE00D451F9 /* Build configuration list for PBXNativeTarget "JYScrollTabDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56F87A871F96F3FE00D451F9 /* Debug */,
+				56F87A881F96F3FE00D451F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 56F87A4C1F96F3FE00D451F9 /* Project object */;
+}
