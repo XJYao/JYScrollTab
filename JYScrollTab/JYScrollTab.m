@@ -26,36 +26,47 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        //add UI
-        _containerScrollView = [[UIScrollView alloc] init];
-        [_containerScrollView setBackgroundColor:[UIColor clearColor]];
-        [_containerScrollView setPagingEnabled:NO];
-        [self addSubview:_containerScrollView];
-
-        _contentView = [[UIView alloc] init];
-        [_contentView setBackgroundColor:[UIColor clearColor]];
-        [_containerScrollView addSubview:_contentView];
-
-        _separatorImageView = [[UIImageView alloc] init];
-        [_contentView addSubview:_separatorImageView];
-
-        //init
-        _separatorHeight = 5;
-        _showSeparator = YES;
-        _separatorAnimated = YES;
-        _animateDuration = 0.3;
-        _tabs = nil;
-        _selectedTabIndex = NSNotFound;
-        _autoAdjustSelectedTabToCenter = YES;
-
-        [self setShowsHorizontalScrollIndicator:NO];
-        [self setBounces:NO];
-        [self setSeparatorColor:[UIColor blackColor]];
-        [self setSeparatorImage:nil];
+        [self initialize];
     }
     return self;
 }
 
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self initialize];
+    }
+    return self;
+}
+
+- (void)initialize {
+    //add UI
+    _containerScrollView = [[UIScrollView alloc] init];
+    [_containerScrollView setBackgroundColor:[UIColor clearColor]];
+    [_containerScrollView setPagingEnabled:NO];
+    [self addSubview:_containerScrollView];
+
+    _contentView = [[UIView alloc] init];
+    [_contentView setBackgroundColor:[UIColor clearColor]];
+    [_containerScrollView addSubview:_contentView];
+
+    _separatorImageView = [[UIImageView alloc] init];
+    [_contentView addSubview:_separatorImageView];
+
+    //init
+    _separatorHeight = 5;
+    _showSeparator = YES;
+    _separatorAnimated = YES;
+    _animateDuration = 0.3;
+    _tabs = nil;
+    _selectedTabIndex = NSNotFound;
+    _autoAdjustSelectedTabToCenter = YES;
+
+    [self setShowsHorizontalScrollIndicator:NO];
+    [self setBounces:NO];
+    [self setSeparatorColor:[UIColor blackColor]];
+    [self setSeparatorImage:nil];
+}
 - (void)setShowsHorizontalScrollIndicator:(BOOL)showsHorizontalScrollIndicator {
     _showsHorizontalScrollIndicator = showsHorizontalScrollIndicator;
     [_containerScrollView setShowsHorizontalScrollIndicator:_showsHorizontalScrollIndicator];
