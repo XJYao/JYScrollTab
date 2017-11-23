@@ -101,11 +101,30 @@
 @property (nonatomic, copy, setter=didSelectedTab:) void (^didSelectedTab)(UIView *tab, NSUInteger tabIndex);
 
 /**
- select tab with index.
-
+ select tab with index. This will callback by 'didSelectedTab' block and protocol.
+ 
  @param tabIndex index of tab which will be selected.
  @return If tabIndex is NSNotFound, will return NO.
  */
 - (BOOL)selectTab:(NSUInteger)tabIndex;
+
+/**
+ select tab with index. This will callback by 'didSelectedTab' block and protocol.
+
+ @param tabIndex index of tab which will be selected.
+ @param animated use animated.
+ @return If tabIndex is NSNotFound, will return NO.
+ */
+- (BOOL)selectTab:(NSUInteger)tabIndex animated:(BOOL)animated;
+
+/**
+ select tab with index.
+ 
+ @param tabIndex index of tab which will be selected.
+ @param animated if YES, use animated.
+ @param shouldCallback if NO, will not callback by 'didSelectedTab' block and protocol.
+ @return If tabIndex is NSNotFound, will return NO.
+ */
+- (BOOL)selectTab:(NSUInteger)tabIndex animated:(BOOL)animated shouldCallback:(BOOL)shouldCallback;
 
 @end

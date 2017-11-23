@@ -152,27 +152,27 @@
 }
 
 - (BOOL)selectTab:(NSUInteger)tabIndex {
+    return [self selectTab:tabIndex animated:YES shouldCallback:YES];
+}
+
+- (BOOL)selectTab:(NSUInteger)tabIndex animated:(BOOL)animated {
+    return [self selectTab:tabIndex animated:animated shouldCallback:YES];
+}
+
+- (BOOL)selectTab:(NSUInteger)tabIndex animated:(BOOL)animated shouldCallback:(BOOL)shouldCallback {
     if (tabIndex == NSNotFound) {
         return NO;
     }
 
     if (tabIndex >= _tabs.count) {
-        tabIndex = _tabs.count - 1;
+        return NO;
     }
     _selectedTabIndex = tabIndex;
 
-    //call back
     UIView *tab = [_tabs objectAtIndex:_selectedTabIndex];
 
-    if (_didSelectedTab) {
-        _didSelectedTab(tab, _selectedTabIndex);
-    }
-    if (_delegate && [_delegate respondsToSelector:@selector(scrollTab:didSelectedTab:tabIndex:)]) {
-        [_delegate scrollTab:self didSelectedTab:tab tabIndex:_selectedTabIndex];
-    }
-
     //layout
-    [self setNeedsLayout];
+    [self updateLayout:animated];
 
     //auto adjust
     CGFloat offsetY = _containerScrollView.contentOffset.y;
@@ -187,12 +187,22 @@
             needOffsetX = maxOffsetX;
         }
 
-        [_containerScrollView setContentOffset:CGPointMake(needOffsetX, offsetY) animated:YES];
+        [_containerScrollView setContentOffset:CGPointMake(needOffsetX, offsetY) animated:animated];
     } else {
         if (tab.frame.origin.x < _containerScrollView.contentOffset.x) {
-            [_containerScrollView setContentOffset:CGPointMake(tab.frame.origin.x, offsetY) animated:YES];
+            [_containerScrollView setContentOffset:CGPointMake(tab.frame.origin.x, offsetY) animated:animated];
         } else if ((tab.frame.origin.x + tab.frame.size.width) > (_containerScrollView.contentOffset.x + _containerScrollView.frame.size.width)) {
-            [_containerScrollView setContentOffset:CGPointMake(tab.frame.origin.x + tab.frame.size.width - _containerScrollView.frame.size.width, offsetY) animated:YES];
+            [_containerScrollView setContentOffset:CGPointMake(tab.frame.origin.x + tab.frame.size.width - _containerScrollView.frame.size.width, offsetY) animated:animated];
+        }
+    }
+
+    if (shouldCallback) {
+        //call back
+        if (_didSelectedTab) {
+            _didSelectedTab(tab, _selectedTabIndex);
+        }
+        if (_delegate && [_delegate respondsToSelector:@selector(scrollTab:didSelectedTab:tabIndex:)]) {
+            [_delegate scrollTab:self didSelectedTab:tab tabIndex:_selectedTabIndex];
         }
     }
 
@@ -213,9 +223,7 @@
     return tabWidth;
 }
 
-- (void)layoutSubviews {
-    [super layoutSubviews];
-
+- (void)updateLayout:(BOOL)animated {
     CGSize superSize = self.frame.size;
     if (CGSizeEqualToSize(superSize, CGSizeZero)) {
         return;
@@ -282,7 +290,7 @@
     if (CGRectEqualToRect(_separatorImageView.frame, CGRectZero)) {
         [_separatorImageView setFrame:separatorImageViewFrame];
     } else if (!CGRectEqualToRect(_separatorImageView.frame, separatorImageViewFrame)) {
-        if (_separatorAnimated) {
+        if (_separatorAnimated && animated) {
             __weak typeof(self) weak_self = self;
             [UIView animateWithDuration:_animateDuration animations:^{
                 [weak_self.separatorImageView setFrame:separatorImageViewFrame];
@@ -297,6 +305,11 @@
     if (!CGSizeEqualToSize(_containerScrollView.contentSize, contentSize)) {
         [_containerScrollView setContentSize:contentSize];
     }
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    [self updateLayout:_separatorAnimated];
 }
 
 #pragma mark - click
