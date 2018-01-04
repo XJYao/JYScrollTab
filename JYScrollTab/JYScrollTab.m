@@ -174,28 +174,6 @@
     //layout
     [self updateLayout:animated];
 
-    //auto adjust
-    CGFloat offsetY = _containerScrollView.contentOffset.y;
-
-    if (_autoAdjustSelectedTabToCenter) {
-        CGFloat needOffsetX = tab.frame.origin.x + tab.frame.size.width / 2.0 - _containerScrollView.frame.size.width / 2.0;
-
-        CGFloat maxOffsetX = _containerScrollView.contentSize.width - _containerScrollView.frame.size.width;
-        if (needOffsetX < 0) {
-            needOffsetX = 0;
-        } else if (needOffsetX > maxOffsetX) {
-            needOffsetX = maxOffsetX;
-        }
-
-        [_containerScrollView setContentOffset:CGPointMake(needOffsetX, offsetY) animated:animated];
-    } else {
-        if (tab.frame.origin.x < _containerScrollView.contentOffset.x) {
-            [_containerScrollView setContentOffset:CGPointMake(tab.frame.origin.x, offsetY) animated:animated];
-        } else if ((tab.frame.origin.x + tab.frame.size.width) > (_containerScrollView.contentOffset.x + _containerScrollView.frame.size.width)) {
-            [_containerScrollView setContentOffset:CGPointMake(tab.frame.origin.x + tab.frame.size.width - _containerScrollView.frame.size.width, offsetY) animated:animated];
-        }
-    }
-
     if (shouldCallback) {
         //call back
         if (_didSelectedTab) {
@@ -304,6 +282,31 @@
     CGSize contentSize = contentViewFrame.size;
     if (!CGSizeEqualToSize(_containerScrollView.contentSize, contentSize)) {
         [_containerScrollView setContentSize:contentSize];
+    }
+    
+    //auto adjust
+    if (_selectedTabIndex != NSNotFound && _selectedTabIndex < _tabs.count) {
+        UIView *tab = [_tabs objectAtIndex:_selectedTabIndex];
+        CGFloat offsetY = _containerScrollView.contentOffset.y;
+        
+        if (_autoAdjustSelectedTabToCenter) {
+            CGFloat needOffsetX = tab.frame.origin.x + tab.frame.size.width / 2.0 - _containerScrollView.frame.size.width / 2.0;
+            
+            CGFloat maxOffsetX = _containerScrollView.contentSize.width - _containerScrollView.frame.size.width;
+            if (needOffsetX < 0) {
+                needOffsetX = 0;
+            } else if (needOffsetX > maxOffsetX) {
+                needOffsetX = maxOffsetX;
+            }
+            
+            [_containerScrollView setContentOffset:CGPointMake(needOffsetX, offsetY) animated:animated];
+        } else {
+            if (tab.frame.origin.x < _containerScrollView.contentOffset.x) {
+                [_containerScrollView setContentOffset:CGPointMake(tab.frame.origin.x, offsetY) animated:animated];
+            } else if ((tab.frame.origin.x + tab.frame.size.width) > (_containerScrollView.contentOffset.x + _containerScrollView.frame.size.width)) {
+                [_containerScrollView setContentOffset:CGPointMake(tab.frame.origin.x + tab.frame.size.width - _containerScrollView.frame.size.width, offsetY) animated:animated];
+            }
+        }
     }
 }
 
